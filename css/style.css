@@ -5,32 +5,12 @@
   font-weight: 500;
   font-display: swap;
 }
-body {
-  font-family: GMarketSans;
-}
-*{
-  box-sizing: border-box;
 
-
-}
-body {
-  font-family: GMarketSans;
-margin: 0;}
-/* 마진은 모든요소에 따로 있는거아닌가 ???? */
-
-a{
-  text-decoration: none;
-  color: var(--color-text);
-}
-ul{
-  list-style: none;
-  padding: 0;
-}
 /* GLOBAL변수 */
 /* 이게뭐임 */
-:root{
+:root {
   --color-primary: var(--color-black);
-  --color-primary: variant: var(--color-gray);
+  --color-primary: var(--color-gray);
   --color-accent: var(--color-blue);
   --color-accent-variant: var(--color-orange);
   --color-text: var(--color-white);
@@ -39,52 +19,111 @@ ul{
   --color-gray: #1b1e26;
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
---color-white: #fff;
+  --color-white: #fff;
 
   --size-max-width: 1200px;
 }
 
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: GMarketSans;
+  margin: 0;
+}
+/* 마진은 모든요소에 따로 있는거아닌가 ???? */
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 /* header */
-.header{
+.header {
   background-color: var(--color-primary);
   position: fixed;
   top: 0;
+  width: 100%;
   padding: 1rem;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
 }
 /* rem이 뭐엮지 */
 /* __  ??? */
-.header__logo{
-display: flex;
-align-items: center;
-gap: 8px;
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.header__logo__img{
+.header__logo__img {
   width: 36px;
   height: 36px;
-
 }
-.header__logo__title{
+.header__logo__title {
   font-size: 1.8rem;
-
 }
-.header__menu{
+.header__menu {
   display: flex;
   gap: 4px;
 }
-.header__menu__item{
+.header__menu__item {
   padding: 8px 16px;
-
 }
 .header__menu__item:hover {
   border-bottom: 1px solid var(--color-accent);
-
 }
-.header__menu__item.active{
+.header__menu__item.active {
   border: 1px solid var(--color-accent);
-  border-radius: 5px ;
+  border-radius: 5px;
+}
+
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 7rem 1rem 5rem;
+  padding: 7rem 1rem 5rem;
+  text-align: center;
+}
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 3px solid var(--color-accent);
+  object-fit: cover;
+}
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  /* rem 기본적 16px
+  유동적으로 픽셀수 변경가능이라 용이 */
+}
+.home__title--strong {
+  color: var(--color-accent);
+}
+
+.home__description {
+  font-size: 1.5rem;
+}
+.home__contact {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  margin: 2rem;
+  padding: 0.5rem;
+  font-weight: BOLD;
+  border-radius: 5px;
+}
+
+.home__contact:hover {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 2px solid var(--color-accent);
 }

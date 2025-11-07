@@ -19,18 +19,18 @@
     <header class="header">
       <div class="header__logo">
         <img class="header__logo__img" src="./imges/도리무새.ico" alt="logo" />
-        <h1 class="header__logo__title"><a href="nje">nje</a></h1>
+        <h1 class="header__logo__title"><a href="#">nje</a></h1>
         <!-- 여기 ??? -->
       </div>
       <!-- 어차피 nav인데 왜 nav? -->
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a href="#home">홈으로</a></li>
-          <li><a href="#about">nje</a></li>
-          <li><a href="#skill">기술</a></li>
-          <li><a href="#work">포트폴리오</a></li>
-          <li><a href="#license">자격증</a></li>
-          <li><a href="#contect">연락망</a></li>
+          <li><a href="#home" class="header__menu__item active">홈으로</a></li>
+          <li><a href="#about" class="header__menu__item">nje</a></li>
+          <li><a href="#skill" class="header__menu__item">기술</a></li>
+          <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
+          <li><a href="#license" class="header__menu__item">자격증</a></li>
+          <li><a href="#contact" class="header__menu__item">연락망</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +38,13 @@
     <!-- main -->
     <main>
       <!-- home -->
-      <section id="home"></section>
+      <section id="home">
+        <img class="home__avatar" src="./imges/도리무새.jpg" alt="프사" />
+        <h2 class="home__title--strong">안녕<br /><strong>nje</strong></h2>
+        <p>우주에서어쩌고</p>
+        <!-- 스트롱에 --이거임? 왜 -->
+        <a class="home__description" href="contact"></a>
+      </section>
       <!-- about -->
       <section id="about"></section>
       <!-- skill -->
@@ -48,7 +54,7 @@
       <!-- license -->
       <section id="license"></section>
       <!-- contect -->
-      <section id="contect"></section>
+      <section id="contact"></section>
     </main>
   </body>
 </html>
