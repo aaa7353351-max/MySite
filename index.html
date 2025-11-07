@@ -12,25 +12,29 @@
       type="images/x-icon"
     />
     <title>nje&#39;s Website</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- header -->
-    <header>
-      <div>
-        <img src="./imges/도리무새.ico" alt="logo" />
-        <h1><a href="nje"></a></h1>
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo__img" src="./imges/도리무새.ico" alt="logo" />
+        <h1 class="header__logo__title"><a href="nje">nje</a></h1>
+        <!-- 여기 ??? -->
       </div>
-
-      mav
-      <ui>
-        <li><a href="#home">홈으로</a></li>
-        <li><a href="#about">nje</a></li>
-        <li><a href="#skill">기술</a></li>
-        <li><a href="#work">포트폴리오</a></li>
-        <li><a href="#licese">자격증</a></li>
-        <li><a href="#contect">연락망</a></li>
-      </ui>
+      <!-- 어차피 nav인데 왜 nav? -->
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="#home">홈으로</a></li>
+          <li><a href="#about">nje</a></li>
+          <li><a href="#skill">기술</a></li>
+          <li><a href="#work">포트폴리오</a></li>
+          <li><a href="#license">자격증</a></li>
+          <li><a href="#contect">연락망</a></li>
+        </ul>
+      </nav>
     </header>
+    <!-- skills오타라는데 뭐임 -->
     <!-- main -->
     <main>
       <!-- home -->
@@ -41,8 +45,9 @@
       <section id="skill"></section>
       <!-- work -->
       <section id="work"></section>
-
+      <!-- license -->
       <section id="license"></section>
+      <!-- contect -->
       <section id="contect"></section>
     </main>
   </body>
