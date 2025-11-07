@@ -2,28 +2,37 @@
   font-family: "GMarketSans";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
     format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-weight: 500;
   font-display: swap;
 }
-
-/* GLOBAL변수 */
-/* 이게뭐임 */
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+/* Global */
 :root {
   --color-primary: var(--color-black);
-  --color-primary: var(--color-gray);
+  --color-primary-variant: var(--color-gray);
   --color-accent: var(--color-blue);
   --color-accent-variant: var(--color-orange);
   --color-text: var(--color-white);
-
   --color-black: #050a13;
   --color-gray: #1b1e26;
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
   --color-white: #fff;
-
   --size-max-width: 1200px;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -31,13 +40,10 @@ body {
   font-family: GMarketSans;
   margin: 0;
 }
-/* 마진은 모든요소에 따로 있는거아닌가 ???? */
-
 a {
   text-decoration: none;
   color: var(--color-text);
 }
-
 ul {
   list-style: none;
   padding: 0;
@@ -46,8 +52,7 @@ ul {
   padding: 4rem;
   text-align: center;
 }
-
-.max.container {
+.max-container {
   max-width: var(--size-max-width);
   margin: auto;
 }
@@ -55,11 +60,16 @@ ul {
   font-size: 2.5rem;
   margin: 1rem 0;
 }
-
 .description {
   font-size: 1.5rem;
-  margin: ;
-  /* 마진 목적음 ㅜㅜ  ???? */
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: transparent;
+  /* ??? */
+  outline: 0;
+  border: 0;
 }
 /* header */
 .header {
@@ -73,14 +83,11 @@ ul {
   align-items: center;
   z-index: 10;
 }
-/* rem이 뭐엮지 */
-/* __  ??? */
 .header__logo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .header__logo__img {
   width: 36px;
   height: 36px;
@@ -102,11 +109,10 @@ ul {
   border: 1px solid var(--color-accent);
   border-radius: 5px;
 }
-
+/* home */
 #home {
   background-color: var(--color-primary);
   color: var(--color-text);
-  padding: 7rem 1rem 5rem;
   padding: 7rem 1rem 5rem;
   text-align: center;
 }
@@ -120,13 +126,10 @@ ul {
 .home__title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  /* rem 기본적 16px
-  유동적으로 픽셀수 변경가능이라 용이 */
 }
 .home__title--strong {
   color: var(--color-accent);
 }
-
 .home__description {
   font-size: 1.5rem;
 }
@@ -135,57 +138,47 @@ ul {
   background-color: var(--color-accent);
   color: var(--color-black);
   margin: 2rem;
-  padding: 0.5rem;
-  font-weight: BOLD;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
   border-radius: 5px;
 }
-
 .home__contact:hover {
   background-color: transparent;
   color: var(--color-text);
   outline: 2px solid var(--color-accent);
 }
 /* about */
-
 .majors {
   display: flex;
   justify-content: space-between;
-  gap: 2.5rem;
-  margin: 2px, 5rem, 0;
+  gap: 1rem;
+  margin: 2.5rem 0;
 }
-
 .major {
   background-color: var(--color-primary-variant);
-  padding: 2rem;
+  padding: 2rem 1rem;
   color: var(--color-text);
-  cursor: default;
   border-radius: 1rem;
-
-  /* 보더랑 하나더 못적음 ? */
+  cursor: default;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
 }
-
 .major__icon {
   font-size: 4rem;
   margin: 1rem 0;
   color: var(--color-accent);
   transition: all 300ms ease;
-  /* ms ????? */
 }
-
 .major:hover .major__icon {
   transform: rotate(-15deg) scale(1.2);
 }
-
 .major__title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  /* 덜적 ?? */
 }
 .jobs {
   text-align: start;
 }
-
 .job {
   display: flex;
   align-items: center;
@@ -201,15 +194,13 @@ ul {
 }
 .jobs img {
   width: 300px;
-  margin-right: 80px;
+  margin-right: 100px;
 }
-
 /* skills */
 #skills {
   background-color: var(--color-primary-variant);
   color: var(--color-text);
 }
-
 .skills {
   display: grid;
   grid-template-columns: 6fr 4fr;
@@ -220,16 +211,13 @@ ul {
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-  /* 뚱띠단락  뭐임 ??? */
 }
-
 .skills__title {
   color: var(--color-accent);
   margin: 1rem 0;
   font-size: 1.2rem;
 }
-
-.skill__coding {
+.skills__coding {
   grid-row: span 2;
   padding: 1rem;
   background-color: var(--color-primary);
@@ -244,18 +232,114 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-/* ????마타데이타부분 어디?? */
 .bar__bg {
   width: 100%;
   height: 3px;
-  background-color: var(--color-accent--varient);
+  background-color: var(--color-accent-variant);
 }
 .bar__value {
   height: 3px;
   background-color: var(--color-accent);
 }
-.skill__etc {
+.skills__tools {
+  padding: 1rem;
+}
+.skills__etc {
   padding: 1rem;
   background-color: var(--color-primary);
   filter: brightness(150%);
+}
+
+/* work */
+
+#work {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  gap: 1rem;
+}
+
+.category {
+  position: relative;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.category--selected {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.category__count {
+  opacity: 0;
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  background-color: var(--color-accent-variant);
+  border-radius: 100%;
+  color: var(--color-text);
+  transition: all 250ms ease-in;
+}
+.category--selected .category__count .category:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 가로로 4개의 칸을 만들고 각각의 칸을 동일한 너비로 나눔 */
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project__img {
+  width: 100;
+}
+.project__metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms ease-in;
+}
+.project__metadata:hover {
+  opacity: 0;
+}
+/* 덜함 */
+
+.project__title:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: transition(-50%);
+  margin: 0.5rem 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent);
 }
